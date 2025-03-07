@@ -1,4 +1,5 @@
 <body style="margin: 0; background: #000000;">
+	<div id="cover" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; background: #000; z-index: 1000;"></div>
 	<p style="font-family: monospace; margin: 0; text-align: center; color: #ffffff; font-size: 6vh; line-height: 6vh; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">
 		Coming soon...<br>
 		<b id="timer" style="color: #777777; font-weight: 500; font-size: 4vh;"></b>
@@ -24,8 +25,15 @@
 	<audio class="sound" id="fart1" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Fart%2010.mp3"></audio>
 	
 	<script>
-		setTimeout(() => {
-			document.getElementById("fart1").play();
-		}, 500);
+		function main() {
+			setTimeout(() => {
+				document.getElementById("fart1").play();
+			}, 500);
+		}
+
+		document.addEventListener("click", () => {
+			document.body.querySelector('#cover').style.display = "none";
+			main();
+		});
 	</script>
 </body>
