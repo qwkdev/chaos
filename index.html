@@ -1,26 +1,9 @@
 <body style="margin: 0; background: #000000;">
-	<div id="cover" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; background: #000; z-index: 1000;"></div>
-	<p style="font-family: monospace; margin: 0; text-align: center; color: #ffffff; font-size: 6vh; line-height: 6vh; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">
-		Coming soon...<br>
-		<b id="timer" style="color: #777777; font-weight: 500; font-size: 4vh;"></b>
-	</p>
-	<script>
-		var date = new Date("Mar 10, 2025 00:00:00").getTime();
-		var x = setInterval(function() {
-			var time = date - new Date().getTime();
-			
-			var d = Math.floor(time / (1000 * 60 * 60 * 24));
-			var h = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			var m = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
-			var s = Math.floor((time % (1000 * 60)) / 1000);
-			document.getElementById("timer").innerHTML = `${d}d ${h}h ${m}m ${s}s`;
-			
-			if (distance < 0) {
-				clearInterval(x);
-				document.getElementById("timer").innerHTML = "";
-			}
-		}, 500);
-	</script>
+	<div id="cover" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; background: #000; z-index: 1000;">
+		<p style="font-family: monospace; margin: 0; text-align: center; color: #ffffff; font-size: 6vh; line-height: 6vh; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">
+			Click
+		</p>
+	</div>
 
 	<audio class="sound" id="fart1" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Fart%2010.mp3"></audio>
 	
