@@ -31,8 +31,8 @@
 			}, 500);
 		}
 
-		document.addEventListener("click", () => {
-			document.body.querySelector('#cover').style.display = "none";
+		document.body.getElementByID('cover').addEventListener("click", () => {
+			document.body.getElementByID('cover').style.display = "none";
 			main();
 		});
 	</script>
