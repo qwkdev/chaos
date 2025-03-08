@@ -1,8 +1,374 @@
-<body style="margin: 0; background: #000000;">
-	<div id="cover" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; background: #000; z-index: 1000;">
-		<p style="font-family: monospace; margin: 0; text-align: center; color: #ffffff; font-size: 6vh; line-height: 6vh; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">
-			Click
-		</p>
+<head>
+	<style>
+		body {
+			margin: 0;
+			background: #000000;
+
+			overflow: hidden;
+		}
+		#cover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: #000;
+			z-index: 1000;
+
+			p {
+				font-family: monospace;
+				margin: 0;
+				text-align: center;
+				color: #ffffff;
+				font-size: 6vh;
+				line-height: 6vh;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		#bg1 {
+			animation: .5s infinite alternate linear bg1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200vw;
+			height: 200vh;
+
+			div {
+				width: 200vw;
+				height: 100vh;
+				background: linear-gradient(135deg, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00);
+			}
+			#flipped-bg { 
+				background: linear-gradient(45deg, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00);
+			}
+		}
+
+		@keyframes bg1 {
+            0% {
+				transform: translateX(-50%) translateY(0);
+			}
+			50% {
+				transform: translateY(-50%);
+			}
+			100% {
+				transform: translateX(-50%) translateY(-100%);
+			}
+        }
+
+		#bg2 {
+			animation: 2.5s infinite linear alternate bg2;
+			position: absolute;
+			top: -100vh;
+			left: -100vw;
+			width: 300vw;
+			height: 300vh;
+
+			--bg2c1: #fff;
+			--bg2c2: #000;
+
+			background: linear-gradient(to right, var(--bg2c1), var(--bg2c2), var(--bg2c1), var(--bg2c2), var(--bg2c1), var(--bg2c2), var(--bg2c1), var(--bg2c2), var(--bg2c1), var(--bg2c2), var(--bg2c1), var(--bg2c2));
+			background-size: 200% 50%;
+
+		}
+
+		@keyframes bg2 {
+			0% {
+				transform: rotate(0deg);
+				background-position: 0% 50%;
+
+				--bg2c1: #fff;
+				--bg2c2: #000;
+			}
+			16.67% {
+				transform: rotate(180deg);
+				background-position: 100% 50%;
+
+				--bg2c1: #fff;
+				--bg2c2: #000;
+			}
+			33.33% {
+				transform: rotate(360deg);
+				background-position: 0% 50%;
+
+				--bg2c1: #fff;
+				--bg2c2: #000;
+			}
+			50% {
+				transform: rotate(0deg);
+				background-position: 100% 50%;
+
+				--bg2c1: #000;
+				--bg2c2: #fff;
+			}
+			66.67% {
+				transform: rotate(-360deg);
+				background-position: 0% 50%;
+
+				--bg2c1: #000;
+				--bg2c2: #fff;
+			}
+			83.33% {
+				transform: rotate(-180deg);
+				background-position: 100% 50%;
+
+				--bg2c1: #000;
+				--bg2c2: #fff;
+			}
+			100% {
+				transform: rotate(0deg);
+				background-position: 0% 50%;
+
+				--bg2c1: #000;
+				--bg2c2: #fff;
+			}
+        }
+
+		#bg3 {
+			animation: .5s infinite alternate linear bg3;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+
+			background: #000;
+		}
+		@keyframes bg3 {
+			0%    { background: #f00; }
+			12.5% { background: #fa0; }
+			25%   { background: #ff0; }
+			37.5% { background: #0f0; }
+			50%   { background: #0ff; }
+			62.5% { background: #00f; }
+			75%   { background: #60f; }
+			87.5% { background: #f0f; }
+			100%  { background: #f00; }
+		}
+
+		#bg4 {
+			position: absolute;
+			background: #000;
+			display: grid;
+			animation: 2s infinite linear alternate bg4;
+
+			top: calc(-100vw + 50vh);
+			left: -50vw;
+			width: 200vw;
+			height: 200vw;
+			grid-template-columns: 100vw 100vw;
+			grid-template-rows: 100vw 100vw;
+
+			div {
+				width: 100%;
+				height: 100%;
+				/* background-size: 50% 50%;
+				background-repeat: repeat; */
+			}
+
+			&:nth-child(1) {
+				background-image: linear-gradient(-45deg, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f);
+			}
+            &:nth-child(2) {
+				background-image: linear-gradient(45deg, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f);
+			}
+            &:nth-child(3) {
+				background-image: linear-gradient(-135deg, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f);
+			}
+            &:nth-child(4) {
+				background-image: linear-gradient(135deg, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f);
+			}
+		}
+
+		@media only screen and (max-width: 100vh) {
+			#bg4 {
+				top: -50vh;
+				left: calc(-100vh + 50vw);
+				width: 200vh;
+				height: 200vh;
+				grid-template-columns: 100vh 100vh;
+				grid-template-rows: 100vh 100vh;
+			}
+		}
+
+
+		@keyframes bg4 {
+			0% {
+				transform: rotate(0deg) scale(1);
+			}
+			25% {
+				transform: rotate(180deg) scale(1.75);
+			}
+			49.99% {
+				transform: rotate(360deg) scale(1);
+			}
+			50.01% {
+				transform: rotate(0deg) scale(1);
+			}
+			75% {
+				transform: rotate(180deg) scale(1.75);
+			}
+			100% {
+				transform: rotate(360deg) scale(1);
+			}
+		}
+
+		#imgs {
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+			overflow: hidden;
+
+			z-index: 100;
+
+			img {
+				position: absolute;
+				width: 10vw;
+				height: 10vw;
+				border-radius: .25vw;
+				z-index: 100;
+				
+				top: -10vw;
+				right: -10vw;
+			}
+
+			#img0 {
+				animation: 5s linear infinite imganim3;
+			}
+		}
+
+		@keyframes imganim0 {
+			0% {
+				bottom: 0vw;
+				right: -10vw;
+
+				top: auto; left: auto;
+			}
+			50% {
+				bottom: calc(100vh - 10vw);
+				right: 45vw;
+
+				top: auto; left: auto;
+			}
+			100% {
+				bottom: 0vw;
+				right: 100vw;
+
+				top: auto; left: auto;
+			}
+		}
+		@keyframes imganim1 {
+			0% {
+				top: 0vw;
+				left: -10vw;
+
+				bottom: auto; right: auto;
+			}
+			100% {
+				transform: rotate(360deg);
+				top: calc(100vh - 10vw);
+				left: 100vw;
+
+				bottom: auto; right: auto;
+			}
+		}
+		@keyframes imganim2 {
+			0% {
+				transform: rotate(0) scale(0.5);
+				bottom: -10vw;
+				right: 20vw;
+
+				top: auto; left: auto;
+			}
+			25% {
+				transform: rotate(0) scale(1);
+				bottom: calc(50vh - 5vw);
+				right: 20vw;
+
+				top: auto; left: auto;
+			}
+			50% {
+				transform: rotate(-180deg) scale(1.5);
+
+				top: auto; left: auto;
+			}
+			75% {
+				transform: rotate(-360deg) scale(1);
+				bottom: calc(50vh - 5vw);
+				right: 70vw;
+
+				top: auto; left: auto;
+			}
+			100% {
+				transform: rotate(-360deg) scale(0.5);
+				bottom: 100vh;
+				right: 70vw;
+
+				top: auto; left: auto;
+			}
+		}
+		@keyframes imganim3 {
+			0% {
+				bottom: 0;
+				left: -10vw;
+
+				top: auto; right: auto;
+			}
+			40% {
+				bottom: calc(100vh - 10vw);
+				left: 90vw;
+				transform: scale(1);
+
+				top: auto; right: auto;
+			}
+			70% {
+				bottom: -2vw;
+				left: 47vw;
+				transform: scale(0.75) rotate(0);
+
+				top: auto; right: auto;
+			}
+			100% {
+				bottom: 100vh;
+				left: -10vw;
+				transform: scale(1.25) rotate(-720deg);
+
+				top: auto; right: auto;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="cover">
+		<p>Click</p>
+	</div>
+
+	<div id="bg1" style="display: none;">
+		<div></div>
+		<div id="flipped-bg"></div>
+		<div></div>
+	</div>
+	<div id="bg2" style="display: none;"></div>
+	<div id="bg3" style="display: none;"></div>
+	<div id="bg4" style="display: none;">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+	<div id="imgs">
+		<img id="img0" src="https://raw.githubusercontent.com/qwkdev/batch/refs/heads/main/meme-crash/0.jpg"></img>
+		<img id="img1" src="https://raw.githubusercontent.com/qwkdev/batch/refs/heads/main/meme-crash/1.jpg"></img>
+		<img id="img2" src="https://raw.githubusercontent.com/qwkdev/batch/refs/heads/main/meme-crash/2.jpg"></img>
+		<img id="img3" src="https://raw.githubusercontent.com/qwkdev/batch/refs/heads/main/meme-crash/3.jpg"></img>
+		<img id="img4" src="https://raw.githubusercontent.com/qwkdev/batch/refs/heads/main/meme-crash/4.jpg"></img>
+		<img id="img5" src="https://raw.githubusercontent.com/qwkdev/batch/refs/heads/main/meme-crash/5.jpg"></img>
+		<img id="img6" src="https://raw.githubusercontent.com/qwkdev/batch/refs/heads/main/meme-crash/6.jpg"></img>
+		<img id="img7" src="https://raw.githubusercontent.com/qwkdev/batch/refs/heads/main/meme-crash/7.jpg"></img>
 	</div>
 
 	<audio class="sound" id="fart1" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Fart%2010.mp3"></audio>
