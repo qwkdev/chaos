@@ -169,21 +169,21 @@
 				background-repeat: repeat; */
 			}
 
-			&:nth-child(1) {
+			#bg4d1 {
 				background-image: linear-gradient(-45deg, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f);
 			}
-            &:nth-child(2) {
+            #bg4d2 {
 				background-image: linear-gradient(45deg, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f);
 			}
-            &:nth-child(3) {
+            #bg4d3 {
 				background-image: linear-gradient(-135deg, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f);
 			}
-            &:nth-child(4) {
+            #bg4d4 {
 				background-image: linear-gradient(135deg, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f, #f00, #fa0, #ff0, #0f0, #0ff, #00f, #60f, #f0f);
 			}
 		}
 
-		@media only screen and (max-width: 100vh) {
+		/* @media only screen and (max-width: 100vh) {
 			#bg4 {
 				top: -50vh;
 				left: calc(-100vh + 50vw);
@@ -192,7 +192,7 @@
 				grid-template-columns: 100vh 100vh;
 				grid-template-rows: 100vh 100vh;
 			}
-		}
+		} */
 
 
 		@keyframes bg4 {
@@ -346,18 +346,18 @@
 		<p>Click</p>
 	</div>
 
-	<div id="bg1" style="display: none;">
+	<div class="bg" id="bg1" style="display: none;">
 		<div></div>
 		<div id="flipped-bg"></div>
 		<div></div>
 	</div>
-	<div id="bg2" style="display: none;"></div>
-	<div id="bg3" style="display: none;"></div>
-	<div id="bg4" style="display: none;">
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
+	<div class="bg" id="bg2" style="display: none;"></div>
+	<div class="bg" id="bg3" style="display: none;"></div>
+	<div class="bg" id="bg4" style="display: none;">
+		<div id="bg4d1"></div>
+		<div id="bg4d2"></div>
+		<div id="bg4d3"></div>
+		<div id="bg4d4"></div>
 	</div>
 
 	<div id="imgs">
@@ -371,13 +371,95 @@
 		<img id="img7" src="https://raw.githubusercontent.com/qwkdev/batch/refs/heads/main/meme-crash/7.jpg"></img>
 	</div>
 
-	<audio class="sound" id="fart1" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Fart%2010.mp3"></audio>
-	
+	<audio class="spam"  src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Airhorn1.mp3"></audio>
+	<audio class="spam"  src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Fart%2010%20(Wet%20Fart)2.mp3"></audio>
+	<audio class="spam"  src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Fart%20113.mp3"></audio>
+	<audio class="spam"  src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Fart%208%20(BASS%20BOOSTED)3.mp3"></audio>
+	<audio class="spam"  src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Goofy%20Horn3.mp3"></audio>
+	<audio class="spam"  src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Metal%20Pipe3.mp3"></audio>
+	<audio class="spam"  src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Mr%20Andy%20Hoops%2011.mp3"></audio>
+	<audio class="spam"  src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Oh%20Yes%20Daddy1.mp3"></audio>
+	<audio class="spam"  src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/RAAAAAH3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Ali-A%20Intro%20BASS%20BOOSTED3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Augh2.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/DB12.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/DB33.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Don%20Pollo%20Chipmunk3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Fart%205%20(Brain%20Fart%20SLOWED)3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Goofy%20Ahh%20Uncle2.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Goofy%20Android3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Goofy%20Burp%20Fart3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Grandpa%20Fart3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Hamburger3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Hog%20Rider%20BASS%20BOOSTED3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/I%20Like%20Watching%20Videos3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Moan%2013.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/N%20Guacamole3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/N%20Macky%20Gee3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/N%20Musha%20Drink2.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/N%20North%20Korean%20Girl3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/N%20Perfet%20Peter3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/N%20Peter2.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/N%20Scotts3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Ring%20Tone2.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/School%20Phone2.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Scream3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Skibidi%20Toilet%20BASS%20BOOSTED3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Skibidi%20Toilet%20Remix2.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Un%20Video%20Mas%20Mi%20Gente3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Whatsapp%20BASS%20BOOSTED3.mp3"></audio>
+	<audio class="sound" src="https://github.com/qwkdev/sfx/raw/refs/heads/main/soundboard/sounds/Whistle3.mp3"></audio>
+
 	<script>
-		function main() {
+		const spam = document.querySelectorAll('audio.spam');
+		const sounds = document.querySelectorAll('audio.sound');
+		const fade = 1000;
+		function audioPlayer() {
+			let sound = sounds[Math.floor(Math.random() * sounds.length)];
+			sound.play();
+
+			let len = sound.duration * 1000
+
 			setTimeout(() => {
-				document.getElementById("fart1").play();
-			}, 500);
+				audioPlayer();
+			}, len > fade ? len - fade : len );
+		}
+		function audioSpam() {
+			let sound = spam[Math.floor(Math.random() * spam.length)];
+			sound.play();
+
+			setTimeout(() => {
+				audioSpam();
+			}, sound.duration * 1000 );
+		}
+
+		function animate() {
+			Array.from(document.querySelectorAll('div#imgs img')).forEach(ele => {
+				let duration = Math.floor(Math.random() * 4) + 2;
+				let animation = Math.floor(Math.random() * 4);
+
+				ele.style.animation = `${duration}s linear infinite imganim${animation}`;
+			})
+		}
+		function background() {
+			let choice = Math.floor(Math.random() * 4) + 1;
+
+			Array.from(document.querySelectorAll('div.bg')).forEach(ele => {
+				ele.style.display = "none";
+			})
+			document.getElementById('bg' + choice).style.display = "block";
+		}
+
+		function main() {
+			animate();
+			setInterval(animate, 5000);
+
+			background();
+			setInterval(background, 2000);
+
+			audioPlayer();
+			audioPlayer();
+			audioSpam();
 		}
 
 		document.getElementById('cover').addEventListener("click", () => {
